@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+      <Version>10.0.0</Version>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>217c333c-b86c-4d2d-86f3-bd22c23df007</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.15" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="7.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HRC.CalendarApi.Contracts\HRC.CalendarApi.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,47 @@
+@HRC.CalendarApi_HostAddress = http://localhost:5293
+
+### Alle Feiertage 2026, Bundesland BB
+GET {{HRC.CalendarApi_HostAddress}}/api/feiertage/2026?isoCode=BB
+Accept: application/json
+
+### Alle Feiertage 2026, Bundesland BY
+GET {{HRC.CalendarApi_HostAddress}}/api/feiertage/2026?isoCode=BY&region=0
+Accept: application/json
+
+### Tage vor/nach den Feiertagen 2026 (je 1 Tag)
+GET {{HRC.CalendarApi_HostAddress}}/api/feiertage/2026/umfeld?isoCode=BY&region=1
+Accept: application/json
+
+### Tage vor/nach den Feiertagen 2026 (3 Tage davor, 2 danach)
+GET {{HRC.CalendarApi_HostAddress}}/api/feiertage/2026/umfeld?isoCode=BY&tageVorher=3&tageNachher=2
+Accept: application/json
+
+### Nur Tage nach den Feiertagen
+GET {{HRC.CalendarApi_HostAddress}}/api/feiertage/2026/umfeld?isoCode=BB&tageVorher=0&tageNachher=1
+Accept: application/json
+
+### Ostersonntag 2026, Standard (isoCode = BB)
+GET {{HRC.CalendarApi_HostAddress}}/api/feiertage/ostersonntag/2026
+Accept: application/json
+
+### Ostersonntag 2026, anderes Bundesland
+GET {{HRC.CalendarApi_HostAddress}}/api/feiertage/ostersonntag/2026?isoCode=BY&region=0
+Accept: application/json
+
+### Weitere Jahre
+GET {{HRC.CalendarApi_HostAddress}}/api/feiertage/ostersonntag/2025
+Accept: application/json
+
+###
+GET {{HRC.CalendarApi_HostAddress}}/api/feiertage/ostersonntag/2027
+Accept: application/json
+
+### Jahr ohne Daten (erwartet 404)
+GET {{HRC.CalendarApi_HostAddress}}/api/feiertage/ostersonntag/1800
+Accept: application/json
+
+### Ungültiges Jahr (erwartet 404, wegen :int-Constraint)
+GET {{HRC.CalendarApi_HostAddress}}/api/feiertage/ostersonntag/abc
+Accept: application/json
+
+###

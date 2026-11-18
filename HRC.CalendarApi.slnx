@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="HRC.CalendarApi.Contracts/HRC.CalendarApi.Contracts.csproj" />
+  <Project Path="HRC.CalendarApi/HRC.CalendarApi.Api.csproj" />
+</Solution>
